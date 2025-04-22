@@ -1,5 +1,8 @@
 package com.jotadev.calculator.ui.theme.components
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -33,7 +36,8 @@ fun ButtonsCalculate(
     ) {
         Text(
             text = label,
-            fontSize = 28.sp,
+            fontSize = 29.sp,
+            softWrap = false
         )
     }
 }
