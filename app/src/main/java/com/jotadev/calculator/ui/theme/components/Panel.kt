@@ -1,24 +1,22 @@
 package com.jotadev.calculator.ui.theme.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Paneldigital() {
+fun Paneldigital(
+    currentOperation: String,
+    result: String
+) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -32,13 +30,15 @@ fun Paneldigital() {
         )
         {
             Text(
-                text = "20+20",
+                text = currentOperation,
                 modifier = Modifier
                     .padding(end = 25.dp, bottom = 10.dp),
                 fontSize = 40.sp
             )
             Text(
-                text = "40",
+                text = result,
+                softWrap = false,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                 modifier = Modifier
                     .padding(end = 25.dp, bottom = 10.dp),
                 fontSize = 80.sp
